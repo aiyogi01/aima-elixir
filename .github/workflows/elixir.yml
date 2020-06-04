@@ -22,4 +22,6 @@ jobs:
       - name: Install Dependencies
         run: mix deps.get
       - name: Run Tests
-        run: mix coveralls.github
+        run: mix coveralls.json
+      - name: Upload Test Coverage
+        run: bash <(curl -s https://codecov.io/bash)
